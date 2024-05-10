@@ -1,0 +1,11 @@
+services:
+  spring-postgres-db:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=spring_postgres_db'
+      - 'POSTGRES_PASSWORD=secret'
+      - 'POSTGRES_USER=myuser'
+    ports:
+      - '5432'
+    volumes:
+      - /data/spring_postgres:db:/var/lib/postgresql/data
